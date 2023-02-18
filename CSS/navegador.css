@@ -1,0 +1,91 @@
+.encabezado{
+	box-shadow: 0 4px 5px var(--navegador-sombra);
+	position: fixed;
+	background: var(--color-tema);
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.navegador{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+/*LOGO*/
+
+.logo{
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--color-primario);
+}
+
+.logo img{
+	border-radius: 50%;
+}
+
+/*MENU*/
+
+.botonMenu {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    width: auto;    
+	height: 3rem;
+	position: fixed;
+	top: 5px;
+	right: 1rem;
+	background-color: black; 
+	border: 0;
+	color: white;
+	cursor: pointer;
+}
+.botonMenu:focus {
+	outline: none;
+}
+.botonMenu:focus + .principal {
+	transform: translateX(0rem);
+}
+nav.principal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 50;
+	width: 15rem;
+	background-color: black;
+	transform: translateX(15rem);
+	transition: 1s all;
+}
+nav.principal ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+nav.principal a {
+	display: block;
+	color: #D5DED9;
+	padding: 1rem;
+	transition: .5s all;
+	position: relative;
+}
+nav.principal a:hover {
+	text-decoration: none;
+	background-color: grey;
+	color: var(--color-primario);
+}
+.menu a::after{
+	content: "";
+	background-color: var(--color-secundario);
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	height: 4px;
+	opacity: 0.8;
+}
